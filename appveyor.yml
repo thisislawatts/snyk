@@ -44,16 +44,16 @@ install:
   - npx pkg . --targets node10-win-x64
 
 build:
-  verbosity: minimal
-
-after_build:
-  cmd: >-
-      7z a snyk.zip snyk.exe
+  off
 
 # Post-install test scripts.
 test_script:
   - npm run snyk-auth-windows
   - npm run tap
+
+after_test:
+  cmd: >-
+      7z a snyk.zip snyk.exe
 
 artifacts:
   - path: sny.zip
