@@ -1,8 +1,5 @@
 # https://www.appveyor.com/docs/appveyor-yml
 
-# to disable automatic builds
-build: off
-
 # branches to build
 branches:
   # whitelist
@@ -28,8 +25,6 @@ cache:
 # Test against these versions of Node.js
 environment:
   matrix:
-    - nodejs_version: "6"
-    - nodejs_version: "8"
     - nodejs_version: "10"
 
 # fastfail
@@ -45,8 +40,21 @@ install:
   - npm --version
   # install modules
   - npm install
+  - npm run build
+  - npx pkg . --targets node10-win-x64
+
+build:
+  verbosity: minimal
+
+after_build:
+  cmd: >-
+      7z a snyk.zip snyk.exe
 
 # Post-install test scripts.
 test_script:
   - npm run snyk-auth-windows
   - npm run tap
+
+artifacts:
+  - path: sny.zip
+    name: Snyk Preview
