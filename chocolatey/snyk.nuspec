@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>snyk-preview</id>
+    <title>Snyk Preview</title>
+    <version>1.0.0</version>
+    <authors>Jasper</authors>
+    <owners>Jasper</owners>
+    <summary>Snyk helps you use open source and stay secure.</summary>
+    <description>Snyk helps you use open source and stay secure. Continuously find and fix vulnerabilities for npm, Maven, NuGet, RubyGems, PyPI and much more.
+    </description>
+    <projectUrl>https://github.com/thisislawatts/snyk</projectUrl>
+    <projectSourceUrl>https://github.com/thisislawatts/snyk</projectSourceUrl>
+    <docsUrl>https://github.com/thisislawatts/snyk/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/thisislawatts/snyk/issues</bugTrackerUrl>
+    <tags>snyk security</tags>
+    <copyright>Apache 2.0</copyright>
+    <licenseUrl>https://github.com/thisislawatts/snyk/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Publishing to Chocolatey</releaseNotes>
+  </metadata>
+</package>
